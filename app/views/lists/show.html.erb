@@ -17,7 +17,7 @@
     <div class="cards">
       <% @list.bookmarks.each do |b| %>
 
-
+      <%= cl_image_tag("rb.jpg", width: 400, height: 300, crop: :fill) %>
           <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
             <div class="card-product-infos"><%= "#{b.movie.title} - #{b.comment} - " %><%= link_to "delete", bookmark_path(b), method: :delete %></div>
 
