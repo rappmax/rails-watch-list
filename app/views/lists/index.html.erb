@@ -1,8 +1,26 @@
 
-<div class="container">
+<div class="container my-5">
+<div class="header">
+  <%= cl_image_tag("rb.jpg", width: 1200, height: 300, crop: :fill) %>
+</div>
   <ul>
     <% @lists.each do |list| %>
-      <li><%= link_to list.name, list_path(list) %></li>
+      <div class="card-product">
+        <div class="card-product-infos">
+          <%= cl_image_tag("symbol.jpg", width: 400, height: 300, crop: :fill) %>
+          <%= link_to list.name, list_path(list) %>
+        </div>
+      </div>
     <% end %>
   </ul>
 </div>
+
+<!--
+<div class="card-product">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="card-product-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+ -->
